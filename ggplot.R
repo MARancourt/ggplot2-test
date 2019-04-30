@@ -23,7 +23,7 @@ library(XML)
 library(RCurl)
 library(maps)
 
-
+## TEST ## 
 
 ########## We load the data from the webpage into R ###########
 
