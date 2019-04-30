@@ -55,7 +55,7 @@ Top9_album <- Top9_album[,-4]
 ########## Faire un ggplot des albums les plus vendus ###########
 
 # Template d'un graph qui pourrait bien illustrer nos données ? 
-ggplot(nomDuDataFrame, aes(x=nomAlbum, y=nombreAlbumsVendus)) + 
+ggplot(Top9_album, aes(x=Album, y=VenteMillions)) + 
   geom_bar(stat="identity", width=.5, fill="darkorange2") + 
   labs(title="Albums musicaux les plus vendus", 
        caption="source: Wikipedia, Liste des albums musicaux les plus vendus, en date du 29 avril 2019.") + 
