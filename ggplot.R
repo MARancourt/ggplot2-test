@@ -17,6 +17,7 @@
 ########## Loaded les packages nécessaires ###########
 
 library(ggplot2) # pour les graphiques
+theme_set(theme_bw())
 library(tidyverse)
 library(stringr)
 library(XML) 
@@ -53,3 +54,9 @@ Top9_album <- Top9_album[,-4]
 
 ########## Faire un ggplot des albums les plus vendus ###########
 
+# Template d'un graph qui pourrait bien illustrer nos données ? 
+ggplot(nomDuDataFrame, aes(x=nomAlbum, y=nombreAlbumsVendus)) + 
+  geom_bar(stat="identity", width=.5, fill="darkorange2") + 
+  labs(title="Albums musicaux les plus vendus", 
+       caption="source: Wikipedia, Liste des albums musicaux les plus vendus, en date du 29 avril 2019.") + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
